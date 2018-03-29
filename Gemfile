@@ -19,9 +19,6 @@ gem 'bcrypt', '~> 3.1.7'
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 gem 'rack-cors'
 
-# JSONAPI Resources
-gem 'jsonapi-resources'
-
 # Knock for JWT Authentication
 gem 'knock'
 
@@ -35,13 +32,17 @@ group :development, :test do
   gem 'faker'
   gem 'annotate'
 
+  # Coverage
+  gem 'simplecov', require: false
+
+  # Testing
+  gem 'rspec-rails'
+  gem 'shoulda'
+  gem 'factory_bot_rails'
+
   # Debugging tools
   gem 'pry-rails'
   gem 'pry-byebug'
-end
-
-group :test do
-  gem 'rspec-rails'
 end
 
 group :development do

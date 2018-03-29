@@ -30,6 +30,12 @@ module ContentIndexerRegistrations
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
 
+    # RSpec generators
+    # Use rspec generators
+    config.generators do |g|
+      g.test_framework :rspec
+    end
+
     # Generate models with UUIDs by default
     config.generators do |g|
       g.orm :active_record, primary_key_type: :uuid
